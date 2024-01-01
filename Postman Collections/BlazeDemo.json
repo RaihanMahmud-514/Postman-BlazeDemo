@@ -1,0 +1,457 @@
+{
+	"info": {
+		"_postman_id": "2702b40e-2f75-40d2-bfe1-6d675d4a223a",
+		"name": "BlazeDemo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Registration",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "09d941dd-258f-4b56-a5fc-3180f5b7beff",
+						"exec": [
+							"pm.test(\"Good Response\", function(){\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"id": "bf3994d1-f39b-44d4-af6a-e1b2779666cb",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/register?name=Raihan&company=Demo Company&email=raihan123@dispostable.com&password=123Raihan&confirm_password=123Raihan",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"register"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Raihan"
+						},
+						{
+							"key": "company",
+							"value": "Demo Company"
+						},
+						{
+							"key": "email",
+							"value": "raihan123@dispostable.com"
+						},
+						{
+							"key": "password",
+							"value": "123Raihan"
+						},
+						{
+							"key": "confirm_password",
+							"value": "123Raihan"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "f4fdeca2-060b-41d3-90f1-42f25c9b76fd",
+						"exec": [
+							"pm.test(\"Good Response\", function(){\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"id": "e3e27a56-3573-41a1-9bb0-2384ba2db3f7",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/login?email=raihan123@dispostable.com&password=123Raihan",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"login"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "raihan123@dispostable.com"
+						},
+						{
+							"key": "password",
+							"value": "123Raihan"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Reserve",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "ca517b5b-44be-41e5-97b2-a5290a1d463f",
+						"exec": [
+							"pm.test(\"Good Response\", function(){\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"id": "2554cd1f-acfa-4eb8-a3f6-c610bd8d7808",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/reserve.php?fromPort=Paris&toPort=Buenos Aires",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"reserve.php"
+					],
+					"query": [
+						{
+							"key": "fromPort",
+							"value": "Paris"
+						},
+						{
+							"key": "toPort",
+							"value": "Buenos Aires"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Flights from Paris to Buenos Aires",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "1d20d3b4-0b87-4207-8796-320af25c293e",
+						"exec": [
+							"pm.test(\"Good Response\", function(){\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"id": "18f0794f-1ba9-4a6e-a31d-aae5acf06a32",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/reserve.php?fromPort=Paris&toPort=Buenos Aires",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"reserve.php"
+					],
+					"query": [
+						{
+							"key": "fromPort",
+							"value": "Paris"
+						},
+						{
+							"key": "toPort",
+							"value": "Buenos Aires"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Flights from Boston to Dublin",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "ca107491-6f27-4ecb-b292-a7edaf48198b",
+						"exec": [
+							"pm.test(\"Good Response\", function(){\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"id": "5cd4b1b1-c27f-4064-ad5b-97611a44bf9f",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/reserve.php?fromPort=Boston&toPort=Dublin",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"reserve.php"
+					],
+					"query": [
+						{
+							"key": "fromPort",
+							"value": "Boston"
+						},
+						{
+							"key": "toPort",
+							"value": "Dublin"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Purchase",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "1f99de70-e7d1-4819-bd73-2524f9b9a7f5",
+						"exec": [
+							"pm.test(\"Good Response\", function(){\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"id": "f7d5ab3e-a51e-4f0b-a4ae-374a78181c60",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/purchase.php?flight=43&price=472.56&airline=Virgin America&fromPort=Paris&toPort=Buenos Aires",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"purchase.php"
+					],
+					"query": [
+						{
+							"key": "flight",
+							"value": "43"
+						},
+						{
+							"key": "price",
+							"value": "472.56"
+						},
+						{
+							"key": "airline",
+							"value": "Virgin America"
+						},
+						{
+							"key": "fromPort",
+							"value": "Paris"
+						},
+						{
+							"key": "toPort",
+							"value": "Buenos Aires"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Confirmation",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "41e8e45a-438f-4f89-ac41-3948f04a78ea",
+						"exec": [
+							"pm.test(\"Good Response\", function(){\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"id": "51f52985-fae4-40dd-aa88-4ffa61fc196b",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/purchase.php?inputName=Raihan&address=Dhaka1&city=Dhaka2&state=Dhaka3&zipCode=12345&cardType=visa&creditCardNumber=12345&creditCardMonth=11&creditCardYear=2017&nameOnCard=Raihan",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"purchase.php"
+					],
+					"query": [
+						{
+							"key": "inputName",
+							"value": "Raihan"
+						},
+						{
+							"key": "address",
+							"value": "Dhaka1"
+						},
+						{
+							"key": "city",
+							"value": "Dhaka2"
+						},
+						{
+							"key": "state",
+							"value": "Dhaka3"
+						},
+						{
+							"key": "zipCode",
+							"value": "12345"
+						},
+						{
+							"key": "cardType",
+							"value": "visa"
+						},
+						{
+							"key": "creditCardNumber",
+							"value": "12345"
+						},
+						{
+							"key": "creditCardMonth",
+							"value": "11"
+						},
+						{
+							"key": "creditCardYear",
+							"value": "2017"
+						},
+						{
+							"key": "nameOnCard",
+							"value": "Raihan"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Show Purchase",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "e1d01e98-1b72-44e1-a6c7-5dc33b7647b6",
+						"exec": [
+							"pm.test(\"Good Response\", function(){\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"id": "7afe9354-3af5-4778-8b35-495535538cad",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/confirmation.php?inputName=Raihan&address=Dhaka1&city=Dhaka2&state=Dhaka3&zipCode=12345&cardType=visa&creditCardNumber=12345&creditCardMonth=11&creditCardYear=2017&nameOnCard=Raihan",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"confirmation.php"
+					],
+					"query": [
+						{
+							"key": "inputName",
+							"value": "Raihan"
+						},
+						{
+							"key": "address",
+							"value": "Dhaka1"
+						},
+						{
+							"key": "city",
+							"value": "Dhaka2"
+						},
+						{
+							"key": "state",
+							"value": "Dhaka3"
+						},
+						{
+							"key": "zipCode",
+							"value": "12345"
+						},
+						{
+							"key": "cardType",
+							"value": "visa"
+						},
+						{
+							"key": "creditCardNumber",
+							"value": "12345"
+						},
+						{
+							"key": "creditCardMonth",
+							"value": "11"
+						},
+						{
+							"key": "creditCardYear",
+							"value": "2017"
+						},
+						{
+							"key": "nameOnCard",
+							"value": "Raihan"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
